@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landlord</title>
+</head>
+<body>
+
+    <!-- INCLUDE OUR NAVBAR  -->
+    {% include 'navbar.html' %}
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apartment Table</title>
+ 
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS */
+    .table-striped tbody tr:nth-of-type(odd) {
+      background-color: whitesmoke;
+    }
+
+    .table-striped tbody tr:hover {
+      background-color: whitesmoke;
+    }
+
+    .btn-action {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Tenant Information</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Apartment</th>
+        <th>Contact</th>
+        <th>House No</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+   <!-- rows -->
+      <tr>
+        <!-- table data  -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <button class="btn btn-primary btn-sm btn-action">Update</button>
+          <button class="btn btn-danger btn-sm btn-action">Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <button class="btn btn-primary btn-sm btn-action">Update</button>
+          <button class="btn btn-danger btn-sm btn-action">Delete</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <button class="btn btn-primary btn-sm btn-action">Update</button>
+          <button class="btn btn-danger btn-sm btn-action">Delete</button>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+  <button class="btn btn-primary"><a href="{% url 'home' %}">Back</a>Back</button>
+</div>
+
+<div class="container mt-5">
+  <h2>Tenant's form</h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+      <label for="apartment">Apartment:</label>
+      <input type="text" class="form-control" id="apartment" name="apartment" placeholder="Enter your apartment name">
+    </div>
+    <div class="form-group">
+      <label for="contact">Contact:</label>
+      <input type="text" class="form-control" id="contact" name="contact" placeholder="Enter your contact number">
+    </div>
+    <button type="submit" class="btn btn-primary">save changes</button>
+  </form>
+</div>
+
+
+</body>
+</html>
+
+    
+
+    
+</body>
+</html>

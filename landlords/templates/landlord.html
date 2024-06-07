@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landlord</title>
+</head>
+<body>
+
+    <!-- INCLUDE OUR NAVBAR  -->
+    {% include 'navbar.html' %}
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apartment Table</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS */
+    /* You can customize the table appearance further with your own CSS styles */
+    .table-striped tbody tr:nth-of-type(odd) {
+      background-color: whitesmoke;
+    }
+
+    .table-striped tbody tr:hover {
+      background-color: whitesmoke;
+    }
+
+    .btn-action {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>APARTMENT INFORMATION</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Land number</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+   <!-- rows -->
+        {% for landlord in landlords %}
+          <tr>
+            <!-- table data  -->
+            <td>{{landlord.land_id}}</td>
+            <td>{{landlord.name}}</td>
+            <td>{{landlord.email}}</td>
+            <td>{{landlord.contact}}</td> 
+            <td>
+              <a href="" class= "btn btn-primary btn-sm btn-action">Update</a>
+              <a href="" class="btn btn-danger btn-sm btn-action">Delete</a>
+            </td>
+          </tr>
+          {% endfor %}
+    </tbody>
+  </table>
+  <a href="{% url 'home' %}" class="btn btn-lg btn-primary">Back To Main</a>
+</div>
+
+</body>
+</html>
